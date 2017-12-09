@@ -92,30 +92,30 @@ def print_dad_bot_hi_statement( first_word, second_word ):
 
 def check_if_word_ends_with_ed( word ):
     last_two_letters = len(word) - 2
-    if( word and word[last_two_letters:] == 'ed' ):
+    if( word and word[last_two_letters:].lower() == 'ed' ):
         return True
     return False
 
 def check_if_word_ends_with_ing( word ):
     last_three_letters = len(word) - 3
-    if( word and word[last_three_letters:] == 'ing' ):
+    if( word and word[last_three_letters:].lower() == 'ing' ):
         return True
     return False
 
 def check_if_word_ends_with_y( word ):
     last_letter = len( word ) - 1
-    if( word and word[last_letter:] == 'y' ):
+    if( word and word[last_letter:].lower() == 'y' ):
         return True
     return False
 
 def check_if_word_ends_with_ly( word ):
     last_two_letters = len(word) - 2
-    if( word and word[last_two_letters:] == 'ly' ):
+    if( word and word[last_two_letters:].lower() == 'ly' ):
         return True
     return False
 
 def check_if_word_ends_with_e( word ):
     last_letter = len(word) - 1
-    if( word and word[last_letter:] == 'e' ):
+    if( word and word[last_letter:].lower() == 'e' ):
         return True
     return False
