@@ -13,7 +13,7 @@ def webhook():
     data = request.get_json()
 
     # We don't want to reply do ourselves!
-    if data['name'] != 'Baby DAD Bot':
+    if( data['name'] != 'Baby DAD Bot'):
         phrase = data['text']
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
@@ -53,7 +53,7 @@ def check_if_im_is_used_and_get_position( phrase ):
     words = str.split( phrase )
     for position, word in enumerate( words ):
         word = word.lower()
-        if( word == 'i\'m' or word == 'im' ):
+        if( word == 'i\'m' or word == 'im' or ( ord( word[1] ) == 8217 ) ):
             return position
     return -1
 
