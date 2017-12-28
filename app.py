@@ -15,6 +15,7 @@ def webhook():
     # We don't want to reply do ourselves!
     if( data['name'] != 'Baby DAD Bot'):
         phrase = data['text']
+        check_if_poop_is_used_and_print( phrase )
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
             location = check_if_i_am_is_used_and_get_position( phrase )
@@ -37,6 +38,14 @@ def send_message( msg ):
             }
     request = Request( url, urlencode( data ).encode() )
     json = urlopen( request ).read().decode()
+
+def check_if_poop_is_used_and_print( phrase ):
+    words = str.split( phrase )
+    for word in words:
+        word.lower()
+        if( word == 'poop' ):
+            send_message( '*spoopy' )
+            return
 
 def check_if_i_am_is_used_and_get_position( phrase ):
     words = str.split( phrase )
