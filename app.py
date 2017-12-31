@@ -41,12 +41,10 @@ def send_message( msg ):
     json = urlopen( request ).read().decode()
 
 def check_if_salt_is_used_and_print( phrase ):
-    words = str.split( phrase )
-    for word in words:
-        word.lower()
-        if( word == 'salt' or word == "salty" ):
-            send_message( "https://media.giphy.com/media/3o7P4F86TAI9Kz7XYk/giphy.gif" )
-            return
+    phrase.lower()
+    if( ( "salt" in phrase ) or ( "salty" in phrase ) ):
+        send_message( "https://media.giphy.com/media/3o7P4F86TAI9Kz7XYk/giphy.gif" )
+    return
 
 def check_if_poop_is_used_and_print( phrase ):
     words = str.split( phrase )
@@ -71,8 +69,9 @@ def check_if_im_is_used_and_get_position( phrase ):
     words = str.split( phrase )
     for position, word in enumerate( words ):
         word = word.lower()
-        if( word == 'i\'m' or word == 'im' or ( ord( word[1] ) == 8217 ) ):
-            return position
+        if( len( word ) > 1 ):
+            if( word == 'i\'m' or word == 'im' or ( ord( word[1] ) == 8217 ) ):
+                return position
     return -1
 
 def check_if_words_can_be_repeated( first_word, second_word ):
