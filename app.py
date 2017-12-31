@@ -55,9 +55,9 @@ def check_if_salt_is_used_and_print( phrase ):
 
 def check_if_poop_is_used_and_print( phrase ):
     phrase = phrase.lower()
-        if( "poop" in phrase ):
-            send_message( emoji.emojize( ":pile_of_poo: spoopy :pile_of_poo:" ) )
-            return
+    if( "poop" in phrase ):
+        send_message( emoji.emojize( ":pile_of_poo: spoopy :pile_of_poo:" ) )
+        return
 
 def check_if_i_am_is_used_and_get_position( phrase ):
     words = str.split( phrase )
