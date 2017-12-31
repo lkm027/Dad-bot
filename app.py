@@ -41,7 +41,7 @@ def send_message( msg ):
     json = urlopen( request ).read().decode()
 
 def check_if_salt_is_used_and_print( phrase ):
-    phrase.lower()
+    phrase = phrase.lower()
     if( ( "salt" in phrase ) or ( "salty" in phrase ) ):
         send_message( "https://media.giphy.com/media/3o7P4F86TAI9Kz7XYk/giphy.gif" )
     return
