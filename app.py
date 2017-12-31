@@ -45,7 +45,7 @@ def send_message( msg ):
 def check_if_taylor_is_used_and_print( phrase ):
     phrase = phrase.lower()
     if( "taylor" in phrase ):
-        send_message( emoji.emojize( "Actually it's :sparkles::cocktail_glass: Tequila Holiday :cocktail_glass::sparkles:", use_aliases = True ) )
+        send_message( emoji.emojize( "Actually it's\n:sparkles::cocktail_glass: Tequila Holiday :cocktail_glass::sparkles:", use_aliases = True ) )
 
 def check_if_salt_is_used_and_print( phrase ):
     phrase = phrase.lower()
@@ -54,10 +54,8 @@ def check_if_salt_is_used_and_print( phrase ):
     return
 
 def check_if_poop_is_used_and_print( phrase ):
-    words = str.split( phrase )
-    for word in words:
-        word.lower()
-        if( word == 'poop' ):
+    phrase = phrase.lower()
+        if( "poop" in phrase ):
             send_message( emoji.emojize( ":pile_of_poo: spoopy :pile_of_poo:" ) )
             return
 
