@@ -15,6 +15,7 @@ def webhook():
     # We don't want to reply do ourselves!
     if( data['name'] != 'Baby DAD Bot'):
         phrase = data['text']
+        check_if_salt_is_used_and_print( phrase )
         check_if_poop_is_used_and_print( phrase )
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
@@ -38,6 +39,14 @@ def send_message( msg ):
             }
     request = Request( url, urlencode( data ).encode() )
     json = urlopen( request ).read().decode()
+
+def check_if_salt_is_used_and_print( phrase ):
+    words = str.split( phrase )
+    for word in words:
+        word.lower()
+        if( word == 'salt' or word == "salty" ):
+            send_message( "https://media.giphy.com/media/3o7P4F86TAI9Kz7XYk/giphy.gif" )
+            return
 
 def check_if_poop_is_used_and_print( phrase ):
     words = str.split( phrase )
