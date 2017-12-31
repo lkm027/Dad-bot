@@ -1,5 +1,6 @@
 import os
 import json
+import emoji
 
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -17,6 +18,7 @@ def webhook():
         phrase = data['text']
         check_if_salt_is_used_and_print( phrase )
         check_if_poop_is_used_and_print( phrase )
+        check_if_taylor_is_used_and_print( phrase )
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
             location = check_if_i_am_is_used_and_get_position( phrase )
@@ -39,6 +41,11 @@ def send_message( msg ):
             }
     request = Request( url, urlencode( data ).encode() )
     json = urlopen( request ).read().decode()
+
+def check_if_taylor_is_used_and_print( phrase ):
+    phrase = phrase.lower()
+    if( "taylor" in phrase ):
+        send_message( emoji.emojize( ":sparkles::cocktail_glass: Tequila Holiday :cocktail_glass::sparkles:", use_aliases = True ) )
 
 def check_if_salt_is_used_and_print( phrase ):
     phrase = phrase.lower()
