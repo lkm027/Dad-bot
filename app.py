@@ -19,6 +19,7 @@ def webhook():
         check_if_salt_is_used_and_print( phrase )
         check_if_poop_is_used_and_print( phrase )
         check_if_taylor_is_used_and_print( phrase )
+        check_if_meeting_is_used_and_print( phrase )
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
             location = check_if_i_am_is_used_and_get_position( phrase )
@@ -41,6 +42,11 @@ def send_message( msg ):
             }
     request = Request( url, urlencode( data ).encode() )
     json = urlopen( request ).read().decode()
+
+def check_if_meeting_is_used_and_print( phrase ):
+    phrase = phrase.lower()
+    if( "meeting" in phrase ):
+        send_message( emoji.emojize( ":rose::beer_mug::cactus:\n:rose::beer_mug::cactus:", use_aliases = True ) )
 
 def check_if_taylor_is_used_and_print( phrase ):
     phrase = phrase.lower()
