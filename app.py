@@ -11,10 +11,7 @@ def webhook():
     # We don't want to reply do ourselves!
     if( data['name'] != 'Baby DAD Bot'):
         phrase = data['text']
-        check_if_salt_is_used_and_print( phrase )
-        check_if_poop_is_used_and_print( phrase )
-        check_if_taylor_is_used_and_print( phrase )
-        check_if_meeting_is_used_and_print( phrase )
+        check_for_keywords( phrase )
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
             location = check_if_i_am_is_used_and_get_position( phrase )
