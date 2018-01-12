@@ -3,7 +3,7 @@ from send_message import send_message
 
 def check_for_keywords( phrase ):
     phrase = phrase.lower()
-    if "meeting" in phrase :
+    if "meeting" in phrase:
         print_meeting_capture()
     if "taylor" in phrase:
         print_taylor_capture()
