@@ -1,6 +1,6 @@
 from flask import Flask, request
-import * from search_for_phrases
-import * from can_words_repeat
+from search_for_phrases import *
+from can_words_repeat import *
 
 app = Flask(__name__)
 
@@ -12,8 +12,7 @@ def webhook():
     # We don't want to reply do ourselves!
     if( data['name'] != 'Baby DAD Bot'):
         phrase = data['text']
-        print( phrase )
-        # check_for_keywords( phrase )
+        check_for_keywords( phrase )
         location = check_if_im_is_used_and_get_position( phrase )
         if( location == -1 ):
             location = check_if_i_am_is_used_and_get_position( phrase )
