@@ -3,14 +3,13 @@ from send_message import send_message
 
 def check_for_keywords( phrase ):
     phrase = phrase.lower()
-    print( phrase )
-    if( "meeting" in phrase ):
+    if "meeting" in phrase :
         print_meeting_capture()
-    if( "taylor" in phrase ):
+    if "taylor" in phrase:
         print_taylor_capture()
-    if( "salt" om phrase or "salty" in phrase ):
+    if "salt" in phrase or "salty" in phrase:
         print_salt_capture()
-    if( "poop" in phrase ):
+    if "poop" in phrase:
         print_poop_capture()
 
 def print_meeting_capture()
