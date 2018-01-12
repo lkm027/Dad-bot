@@ -1,6 +1,6 @@
 from flask import Flask, request
-# import search_for_phrases
-# import can_words_repeat
+import search_for_phrases
+import can_words_repeat
 
 app = Flask(__name__)
 
