@@ -12,7 +12,7 @@ def check_for_keywords( phrase ):
     if "poop" in phrase:
         print_poop_capture()
 
-def print_meeting_capture()
+def print_meeting_capture():
     send_message( emoji.emojize( ":rose::beer_mug::cactus:\n:rose::beer_mug::cactus:", use_aliases = True ) )
 
 def print_taylor_capture():
@@ -21,7 +21,7 @@ def print_taylor_capture():
 def print_salt_capture():
     send_message( "https://media.giphy.com/media/3o7P4F86TAI9Kz7XYk/giphy.gif" )
 
-def print_poop_capture()
+def print_poop_capture():
     send_message( emoji.emojize( ":pile_of_poo: spoopy :pile_of_poo:" ) )
 
 def check_if_i_am_is_used_and_get_position( phrase ):
