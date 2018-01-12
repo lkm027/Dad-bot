@@ -1,5 +1,5 @@
 import emoji
-import send_message
+from send_message import send_message
 
 def check_for_keywords( phrase ):
     phrase = phrase.lower()
