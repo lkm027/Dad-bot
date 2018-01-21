@@ -39,7 +39,7 @@ def check_if_im_is_used_and_get_position( phrase ):
     words = str.split( phrase )
     for position, word in enumerate( words ):
         word = word.lower()
-        if( len( word ) > 1 ):
+        if( len( word ) > 1 and len( word ) < 4):
             if( word == 'i\'m' or word == 'im' or ( ord( word[1] ) == 8217 ) ):
                 return position
     return -1
