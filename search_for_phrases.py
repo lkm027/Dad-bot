@@ -11,6 +11,8 @@ def check_for_keywords( phrase ):
         print_salt_capture()
     if "poop" in phrase:
         print_poop_capture()
+    if "hey guys" in phrase:
+        print_hey_guys_response()
 
 def print_meeting_capture():
     send_message( emoji.emojize( ":rose::beer_mug::cactus:\n:rose::beer_mug::cactus:", use_aliases = True ) )
@@ -23,6 +25,10 @@ def print_salt_capture():
 
 def print_poop_capture():
     send_message( emoji.emojize( ":pile_of_poo: spoopy :pile_of_poo:" ) )
+
+def print_hey_guys_response():
+    send_message( ":no_good:" )
+    send_message( "It's pronounced 'Hey everyone'" )
 
 def check_if_i_am_is_used_and_get_position( phrase ):
     words = str.split( phrase )
@@ -43,3 +49,5 @@ def check_if_im_is_used_and_get_position( phrase ):
             if( word == 'i\'m' or word == 'im' or ( ord( word[1] ) == 8217 ) ):
                 return position
     return -1
+
+
