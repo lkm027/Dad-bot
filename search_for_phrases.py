@@ -13,6 +13,8 @@ def check_for_keywords( phrase ):
         print_poop_capture()
     if "hey guys" in phrase:
         print_hey_guys_response()
+    if "quit" in phrase:
+        print_quit_response()
 
 def print_meeting_capture():
     send_message( emoji.emojize( ":rose::beer_mug::cactus:\n:rose::beer_mug::cactus:", use_aliases = True ) )
@@ -29,6 +31,9 @@ def print_poop_capture():
 def print_hey_guys_response():
     send_message( ":no_good:" )
     send_message( "It's pronounced 'Hey everyone'" )
+
+def print_quit_response():
+    send_message( "Quit! Quit! Quit!" )
 
 def check_if_i_am_is_used_and_get_position( phrase ):
     words = str.split( phrase )
