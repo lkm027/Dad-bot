@@ -15,6 +15,8 @@ def check_for_keywords( phrase ):
         print_hey_guys_response()
     if "quit" in phrase:
         print_quit_response()
+    if "fire" in phrase or "fired" in phrase:
+        print_fire()
 
 def print_meeting_capture():
     send_message( emoji.emojize( ":rose::beer_mug::cactus:\n:rose::beer_mug::cactus:", use_aliases = True ) )
@@ -34,6 +36,9 @@ def print_hey_guys_response():
 
 def print_quit_response():
     send_message( "Quit! Quit! Quit!" )
+
+def print_fire():
+    send_message(":fire:")
 
 def check_if_i_am_is_used_and_get_position( phrase ):
     words = str.split( phrase )
