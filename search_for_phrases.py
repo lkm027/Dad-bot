@@ -31,14 +31,14 @@ def print_poop_capture():
     send_message( emoji.emojize( ":pile_of_poo: spoopy :pile_of_poo:" ) )
 
 def print_hey_guys_response():
-    send_message( ":no_good:" )
+    send_message( emoji.emojize( ":no_good:" , use_aliases = True ) )
     send_message( "It's pronounced 'Hey everyone'" )
 
 def print_quit_response():
     send_message( "Quit! Quit! Quit!" )
 
 def print_fire():
-    send_message(":fire:")
+    send_message( emoji.emojize( ":fire:", use_aliases = True ) )
 
 def check_if_i_am_is_used_and_get_position( phrase ):
     words = str.split( phrase )
