@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 @app.route( '/', methods=['POST'] )
 def webhook():
-    print( "in it" )
     data = request.get_json()
 
     # We don't want to reply do ourselves!
