@@ -21,8 +21,3 @@ def get_joke_and_send():
 
 def send_joke( joke ):
     send_message( "{}/n{}".format( joke.title, joke.selftext )
-
-# if joke.distinguished:
-#     print "ew"
-# print joke.title
-# print joke.selftext
