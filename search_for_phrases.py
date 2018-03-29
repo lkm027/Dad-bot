@@ -1,5 +1,6 @@
 import emoji
 from send_message import send_message
+from get_reddit_joke import get_joke_and_send
 
 def check_for_keywords( phrase ):
     phrase = phrase.lower()
@@ -17,6 +18,9 @@ def check_for_keywords( phrase ):
         print_quit_response()
     if "fire" in phrase or "fired" in phrase:
         print_fire()
+    if "@baby dad bot tell me a joke" or "@baby dad bot, tell me a joke":
+        get_joke_and_send()
+        
 
 def print_meeting_capture():
     send_message( emoji.emojize( ":rose::beer_mug::cactus:\n:rose::beer_mug::cactus:", use_aliases = True ) )
