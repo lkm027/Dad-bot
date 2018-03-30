@@ -12,16 +12,15 @@ def get_joke_and_send():
 
     jokes = []
     for submission in reddit.subreddit( 'jokes' ).hot( limit=50 ):
-        # if not submission.distinguished:
+        if not submission.distinguished:
+            jokes.append( submission )
         if "Daniel" in submission.title:
             send_joke( submission )
-        # if "Daniel and Brian are cutting wood in a forest.":
-        #     jokes.append( submission )
 
-    # joke = random.choice( jokes )
+    joke = random.choice( jokes )
 
-    # send_joke( joke )
+    send_joke( joke )
 
 def send_joke( joke ):
-    print joke, joke.title, joke.selftext
+    print( joke, joke.title, joke.selftext )
     send_message( "{}\n\n{}".format( joke.title, joke.selftext ) )
