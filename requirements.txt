@@ -1,4 +1,4 @@
 Flask==0.12.2
 gunicorn==19.7.0
 emoji==0.4.5
-praw==5.3.0
+praw==5.4.0
