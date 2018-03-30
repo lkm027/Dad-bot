@@ -17,7 +17,7 @@ def get_joke_and_send():
         if not submission.distinguished:
             jokes.append( submission )
         if "Daniel" in submission.title and not value:
-            send_joke()
+            send_joke( submission )
 
     joke = random.choice( jokes )
 
