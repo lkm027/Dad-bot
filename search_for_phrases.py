@@ -18,7 +18,7 @@ def check_for_keywords( phrase ):
         print_quit_response()
     if "fire" in phrase or "fired" in phrase:
         print_fire()
-    if "tell me a joke" in phrase:
+    if "tell" in phrase and "a joke" in phrase:
         get_joke_and_send()
 
 def print_meeting_capture():
