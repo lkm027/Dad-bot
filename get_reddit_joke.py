@@ -12,7 +12,7 @@ def get_joke_and_send():
                             user_agent = os.getenv( 'REDDIT_USER_AGENT' ) )
 
     jokes = []
-    for submission in reddit.subreddit( 'jokes' ).hot( limit=25 ):
+    for submission in reddit.subreddit( 'jokes' ).hot( limit=40 ):
         if not submission.distinguished:
             jokes.append( submission )
 
