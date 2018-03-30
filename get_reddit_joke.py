@@ -11,13 +11,12 @@ def get_joke_and_send():
                             user_agent = os.getenv( 'REDDIT_USER_AGENT' ) )
 
     jokes = []
-    for submission in reddit.subreddit( 'jokes' ).hot( limit=35 ):
-        if not submission.distinguished:
+    for submission in reddit.subreddit( 'jokes' ).hot( limit=50 ):
+        # if not submission.distinguished:
+        if submission.title == "Daniel and Brian are cutting wood in a forest.":
             jokes.append( submission )
 
     joke = random.choice( jokes )
-
-    joke = jokes[31]
 
     send_joke( joke )
 
