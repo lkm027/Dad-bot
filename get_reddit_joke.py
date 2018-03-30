@@ -23,4 +23,5 @@ def get_joke_and_send():
     # send_joke( joke )
 
 def send_joke( joke ):
+    print joke, joke.title, joke.selftext
     send_message( "{}\n\n{}".format( joke.title, joke.selftext ) )
